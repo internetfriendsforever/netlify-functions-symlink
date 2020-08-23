@@ -1,7 +1,8 @@
 const version = require('./utils/version')
 
 exports.handler = function(event, context, callback) {
-  return {
-    body: version
-  }
+  callback(null, {
+    statusCode: 200,
+    body: `Hello! ${version}`
+  })
 }
